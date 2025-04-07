@@ -1,6 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
--- Function to draw 3D text for prompts
 function DrawText3D(x, y, z, text)
     local onScreen, _x, _y = World3dToScreen2d(x, y, z)
     local camCoords = GetGameplayCamCoords()
@@ -20,7 +19,6 @@ function DrawText3D(x, y, z, text)
     end
 end
 
--- Main thread: handles repair prompt and repair process
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
